@@ -4,9 +4,9 @@
 
 JS Bin's loop protection implementation as a reusable library.
 
-This code protects use cases where user code includes an infinite loop using a `while`, `for` or `do` loop.
+This code protects use cases where user code includes an infinite loop using a `while`, `for` or `do` loop.  It also prevents infinite loops from being created when a React component references itself.
 
-Note that this does *not* solve the [halting problem](http://en.wikipedia.org/wiki/Halting_problem) but simply rewrites JavaScript (using Babel's AST) wrapping loops with a conditional break. This also *does not* protect against recursive loops.
+Note that this does *not* solve the [halting problem](http://en.wikipedia.org/wiki/Halting_problem) but simply rewrites JavaScript (using Babel's AST) wrapping loops with a conditional break. This also *does not* protect against recursive loops in general, just React components.
 
 ## Example
 
